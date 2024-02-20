@@ -20,10 +20,10 @@ function App() {
 
   return (
 
-    <div className='flex flex-col gap-3  min-h-screen justify-between '>
+    <div className='flex flex-col gap-3 w-full  min-h-screen justify-between '>
 
-    <div className="navbar bg-base-100">
-      <div className="flex-none">
+    <div className="navbar bg-base-100 flex justify-between">
+      <div className="">
       <details className="dropdown">
       <summary className="m-1 btn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></summary>
       <ul className="p-2 shadow-lg menu dropdown-content z-[1] bg-base-100 rounded-box w-52  text-white">
@@ -33,8 +33,8 @@ function App() {
     </details>
       
       </div> 
-      <div className="flex-1">
-        <a className="btn btn-ghost text-xl text-white">EKTHARA FINE ARTS FESTIVAL 2023-24</a>
+      <div className="">
+        <div className=""><a className="btn btn-ghost text-xl text-white ">EKTHARA FINE ARTS FESTIVAL 2023-24</a></div>
       </div>
       <div className="flex-none">
         <button className="btn btn-square btn-ghost">
