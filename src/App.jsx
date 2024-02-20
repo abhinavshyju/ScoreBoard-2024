@@ -13,10 +13,12 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      
+      <Route path='/' element={<Layout/>} > 
         <Route path='/' element={<HomeScreen/>}/>
         <Route path='/sports' element={<SportsResult/>}/>
+      </Route>
     </Routes>
+       {/* <HomeScreen/> */}
     </BrowserRouter>
   
  

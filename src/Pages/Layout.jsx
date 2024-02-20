@@ -17,7 +17,7 @@ const Layout = () => {
           
           </div> 
           <div className="flex-1">
-            <a className="btn btn-ghost text-xl text-white">EKTHARA</a>
+            <a className="btn btn-ghost text-xl text-white">EKTHARA FINE ARTS FESTIVAL 2023-24</a>
           </div>
           <div className="flex-none">
             <button className="btn btn-square btn-ghost">
