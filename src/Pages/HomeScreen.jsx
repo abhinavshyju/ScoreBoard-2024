@@ -70,7 +70,7 @@ console.log(sortedData)
            <div className="w-full flex justify-center items-center h-48 bg-white mb-10 shadow-xl rounded-xl bg-cover bg-center" style={{backgroundImage: "url('https://images.unsplash.com/photo-1523174802553-10fd69b213ec?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"}} >
                 <h1 className='font-black text-6xl text-white'>Arts</h1>
             </div>
-            <h1 className=' text-left ml-4 font-mono font-bold text-xl text-white'> Score Borad</h1>
+            <h1 className=' text-left ml-4 font-mono font-bold text-xl text-white'> Score Board</h1>
                 <div className="w-full shadow-lg rounded-lg flex flex-col py-5 ">
                {sortedData.reverse().map((e,index)=>(
                 <div className=" w-full flex justify-between px-4 py-2 border-b-2 border-gray-600 mt-3 font-semibold">
