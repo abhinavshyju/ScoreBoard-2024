@@ -60,7 +60,7 @@ console.log(sortedData)
            <>
           
 {
-    data == null ? (
+    data == "" ? (
         <div className="flex justify-center  min:h-screen  ">
             <span className="loading loading-ring loading-lg h-[300px]"></span>
         </div>
