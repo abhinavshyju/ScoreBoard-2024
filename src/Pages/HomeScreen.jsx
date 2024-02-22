@@ -32,7 +32,7 @@ const HomeScreen = () => {
             Bansuri.push(e)
         }
     })
-    const mapData = data.reverse().slice(page, 10 + page);
+    const mapData = data.slice(page, 10 + page);
     const nishanScore = Nishan.reduce((total, e) => total + e.score, 0);
     const nagaraScore = Nagara.reduce((total, e) => total + e.score, 0);
     const dhankulScore = Dhankul.reduce((total, e) => total + e.score, 0);
@@ -53,7 +53,8 @@ const HomeScreen = () => {
     }
 ]
 const sortedData = group.slice().sort((a, b) => a.score - b.score);
-
+//   console.log(data.slice(limitStart, limitEnd+1 ))
+console.log(mapData)
     return (
       
            <>
