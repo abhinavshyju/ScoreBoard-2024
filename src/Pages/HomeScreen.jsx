@@ -53,7 +53,7 @@ const HomeScreen = () => {
     }
 ]
 const sortedData = group.slice().sort((a, b) => a.score - b.score);
-console.log(sortedData)
+
   
     return (
       
@@ -100,7 +100,7 @@ console.log(sortedData)
     </thead>
     <tbody>
       {/* row 1 */}
-      {data.reverse().slice(limitStart, limitEnd+1 )
+      {data.slice(limitStart, limitEnd+1 )
                 .map((e)=>(
         <tr>
             <td>{e.name}</td>
