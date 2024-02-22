@@ -32,7 +32,8 @@ const HomeScreen = () => {
             Bansuri.push(e)
         }
     })
-    const mapData = data.slice(page, 10 + page);
+   const mapData = data.slice(page, 10 + page).reverse();
+
     const nishanScore = Nishan.reduce((total, e) => total + e.score, 0);
     const nagaraScore = Nagara.reduce((total, e) => total + e.score, 0);
     const dhankulScore = Dhankul.reduce((total, e) => total + e.score, 0);
