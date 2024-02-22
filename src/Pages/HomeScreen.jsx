@@ -53,8 +53,7 @@ const HomeScreen = () => {
     }
 ]
 const sortedData = group.slice().sort((a, b) => a.score - b.score);
-//   console.log(data.slice(limitStart, limitEnd+1 ))
-console.log(mapData)
+
     return (
       
            <>
