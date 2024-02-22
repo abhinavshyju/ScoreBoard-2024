@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const HomeScreen = () => {
     const [data , setdata] = useState([]);
-    const [page,Setpage]= useState([]);
+    const [page,Setpage]= useState(0);
     const [limitStart, SetlimitStart] = useState(0);
     const [limitEnd, SetlimitEnd] = useState(9);
     useEffect(() => {
@@ -14,6 +14,8 @@ const HomeScreen = () => {
         }
         GetData();
     }, []);
+
+
     const Nishan = [];
     const Nagara = [];
     const Dhankul = [];
@@ -30,7 +32,7 @@ const HomeScreen = () => {
             Bansuri.push(e)
         }
     })
-    const mapData = data.slice(page, 10 + page);
+    const mapData = data.reverse().slice(page, 10 + page);
     const nishanScore = Nishan.reduce((total, e) => total + e.score, 0);
     const nagaraScore = Nagara.reduce((total, e) => total + e.score, 0);
     const dhankulScore = Dhankul.reduce((total, e) => total + e.score, 0);
@@ -51,8 +53,8 @@ const HomeScreen = () => {
     }
 ]
 const sortedData = group.slice().sort((a, b) => a.score - b.score);
-
-  
+//   console.log(data.slice(limitStart, limitEnd+1 ))
+console.log(mapData)
     return (
       
            <>
@@ -98,7 +100,7 @@ const sortedData = group.slice().sort((a, b) => a.score - b.score);
     </thead>
     <tbody>
       {/* row 1 */}
-      {data.reverse().slice(limitStart, limitEnd+1 )
+      {mapData
                 .map((e)=>(
         <tr>
             <td>{e.name}</td>
@@ -115,12 +117,12 @@ const sortedData = group.slice().sort((a, b) => a.score - b.score);
 </div>
 <div className="flex justify-center mt-4">
 <div className="join grid grid-cols-2 w-[200px] ">
-  <button className="join-item btn btn-outline" onClick={()=>{ if(limitStart == 0){
+  <button className="join-item btn btn-outline" onClick={()=>{ if(page == 0){
 
 }else{
-   SetlimitStart(limitStart-10) ;SetlimitEnd(limitEnd - 10)
+  Setpage(page-10)
 }}}>Previous page</button>
-  <button className="join-item btn btn-outline"  onClick={()=> {SetlimitStart(limitStart+10); SetlimitEnd(limitEnd + 10)}}>Next</button>
+  <button className="join-item btn btn-outline"  onClick={()=> {Setpage(page+10)}}>Next</button>
 </div>
 </div>
             </div>
