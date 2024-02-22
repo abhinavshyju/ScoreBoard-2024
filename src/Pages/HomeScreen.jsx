@@ -15,7 +15,7 @@ const HomeScreen = () => {
         GetData();
     }, []);
 
-
+    console.log(data)
     const Nishan = [];
     const Nagara = [];
     const Dhankul = [];
