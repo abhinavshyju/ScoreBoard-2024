@@ -9,7 +9,7 @@ const HomeScreen = () => {
     const [limitEnd, SetlimitEnd] = useState(9);
     useEffect(() => {
         const GetData = async ()=>{
-            const respone =  await axios.get("https://script.googleusercontent.com/macros/echo?user_content_key=6GSgh6bDdoPR1cb9GQIzn6uxQvtlXC6hfBFnKmfaDQKPR_MKS_ag7wuD6O6ijvjXKZqNH6sSuIEKLDon1IFmj_g0PwniU7jJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnMJrYDxmtdOu_m2V4trV0FrLmNQVRowuQGyuxlgvnUfbwoHRLoPq7dYHbcsNLbZl32ecs0XepM1h_AC-Sl1Aa_Q6EkNTFWH3sg&lib=MEtoSape5G71MwvSDAMV700uJLH3g0HUB")
+            const respone =  await axios.get("https://script.googleusercontent.com/macros/echo?user_content_key=vIby41_rkJjkpSY2zwgtaY9V_cYpx0uRzR3EVC11PZ7JJM9hk0ueITy_5Lb1l6ZjdzmgZKXrA8EkZEPEoNEoB74kHvNEjhR4m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnAI0sugNJkfu-B9cbna2c6ZSd-jP6CDsJv1c_YVFaayugCi_4ZmD8eE_wJ_DiL4Kh4PsxAlY8dOUyQVrq7neTJxc_cVhVpmf5Nz9Jw9Md8uu&lib=MEtoSape5G71MwvSDAMV700uJLH3g0HUB")
             setdata(respone.data)
         }
         GetData();
@@ -32,7 +32,7 @@ const HomeScreen = () => {
             Bansuri.push(e)
         }
     })
-   const mapData = data.reverse().slice(page, 10 + page);
+   const mapData = data.slice(page, 10 + page);
 
     const nishanScore = Nishan.reduce((total, e) => total + e.score, 0);
     const nagaraScore = Nagara.reduce((total, e) => total + e.score, 0);
@@ -54,7 +54,7 @@ const HomeScreen = () => {
     }
 ]
 const sortedData = group.slice().sort((a, b) => a.score - b.score);
-//   console.log(data.slice(limitStart, limitEnd+1 ))
+  // console.log(data.slice(limitStart, limitEnd+1 ))
 console.log(mapData)
     return (
       
